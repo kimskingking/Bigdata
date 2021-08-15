@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 600px;
+            height: 400px;
+            border: 2px solid;
+        }
+        .bgcolor{
+            background :skyblue;
+        }
+        td,th{
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+    <table>
+
+        <tr>
+            <th>성명</th>
+            <td><input type="text" name="name" size="10"> </td>
+            <th>성별</th>
+            <td>
+                <input type="radio" name="gender" value="남" checked>남자
+                <input type="radio" name="gender" value="여">여자
+        </td>
+        </tr>
+        <tr>
+            <th>생년월일</th>
+            <td colspan="3">
+                <input type=text name="year" size="20">년<input type=text name="month" size="5">월<input type=text name="day" size="5">일
+                <input type="radio" name = "calendar" value="양력">양력<input type="radio" name = "calendar" value="음력">음력
+            </td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3"><input type = "text" name="addr" size="60"></td>
+        </tr>
+        <tr>
+            <th>전화번호</th>
+            <td colspan="3"><input type = "text" name="phone1" size="10">-<input type = "text" name="phone2" size="10">-<input type = "text" name="phone3" size="10"></td>
+        </tr>
+        <tr>
+            <th colspan="4" class="bgcolor">사용가능한 프로그램 선택하기</th>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <ol type=A>
+                <li><input type="checkbox" name="program" value="한글">한글</li>
+                <li><input type="checkbox" name="program" value="포토샵">포토샵</li>
+                <li><input type="checkbox" name="program" value="매크로">매크로 미디어 디렉터</li>
+                <li><input type="checkbox" name="program" value="드림">드림위버</li>
+                <li><input type="checkbox" name="program" value="3D">3D MAX</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <th class="bgcolor" colspan="4">타고싶은차종</th>
+        </tr>
+        <tr>
+            <td colspan="4">
+            <select name=car>
+                <option>에쿠스</option>
+                <option>체어맨</option>
+                <option>제네시스</option>
+            </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="bgcolor" colspan="4">가고싶은 여행지를 모두 선택하세요.</th>
+        </tr>
+        <tr>
+            <td>
+                <select multiple size="3" name="trip">
+                <option>설악산</option>
+                <option>민둥산</option>
+                <option>백두산</option>
+                <option>부동산</option>
+                </select>    
+            </td>
+        </tr>
+        <tr>
+            <th colspan="4" class="bgcolor">미래 꿈</th>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <textarea rows="5" cols="50">미래의 꿈은 희망입니다.</textarea>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="4">
+                <input type="submit" value="전송">
+                <input type="reset" value="다시쓰기">
+            </th>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

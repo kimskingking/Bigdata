@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //성적입력받아 90점 이상이면 A 80점이상이면 B 70 C 나머지=노력하세요
+        jumsu=prompt("점수를 입력하세요")
+        
+    //    if(jumsu>=90){
+    //         alert("A학점");
+    //     }else if(jumsu>=80){
+    //         alert("B학점");
+    //     }else if(jumsu>=70){
+    //         alert("C학점");
+    //     }else{
+    //         alert("노력하세요");
+    //     }
+    //     document.write();
+        switch(parseInt(jumsu/10)){ //88 /10 = 8.8
+            case 10:
+            case 9: alert("A");break;
+            case 8: alert("B");break;
+            case 7: alert("C");break;
+            default:alert("노력");
+        }
+        //성적을 입력받아 A이면 A학점 ==>switch
+        var score = prompt("점수를 입력하세요","A~F");
+        var grade = score.toUpperCase(); //대문자로 변환
+        switch(grade){
+            case "A": alert("A학점");break;
+            case "B": alert("B학점");break;
+            case "C": alert("C학점");break;
+            case "D": alert("D학점");break;
+            case "F": alert("F학점");break;
+            default:alert("입력오류");
+        }
+
+    </script>
+</body>
+</html>

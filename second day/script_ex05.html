@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test(){
+            //alert("test");
+            //20번에 있는 txt에 반갑습니다.
+            document.getElementById("txt").value="반갑습니다."
+            alert(document.getElementById("txt").value)
+
+        }
+        function test1(str){
+            alert(str);
+        }
+        function changeColor(){
+            document.bgColor="yellow";
+        }
+        function changeStyle(){
+            document.getElementById("p1").style.backgroundColor="red"
+            document.getElementById("p1").style.color="white"
+            document.getElementById("p1").style.fontStyle="italic";
+        }
+        function gugudan(){
+            var str="";
+            for(i=1;i<10;i++){
+                str +="2*"+i+"="+2*i+"<br>";
+            }
+            document.getElementById("result").innerHTML=str;
+        }
+        function guguCal(){
+            d = document.getElementById("dan").value;
+            var str="";
+            for(i=1;i<10;i++){
+                str += d+"*"+i+"="+d*i+"<br>";
+            }
+            // document.getElementById("guguArea").innerHTML=str;
+            document.querySelector("#guguArea").innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txt"><br/>
+    <input type="button" value="test" onclick="test()"/>
+    <input type="button" value="test1" onclick="test1('안녕')"/>
+    <input type="button" value="변경" onclick="changeColor()"/>
+    <hr/>
+    <p id="p1">여기를 변경합니다.</p>
+    <input type="button" value="클릭" onclick="changeStyle()"/>
+    <input type="button" value="2단" onclick="gugudan()"/>
+    <div id ="result"></div><br/>
+    단 : <input type="text" id="dan" size=5/>
+    <input type="button" value="구구단" onclick="guguCal()">
+    <div id ="guguArea"></div>
+</body>
+</html>
