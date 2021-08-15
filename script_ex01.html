@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    안녕하세요
+    <script>
+        // 자바스크립트 출력문
+        document.write("자바스크립트 안녕하세요<br>");
+        document.write("반갑습니다.")
+
+        document.write("<hr>")
+        a=7;
+        b=5;
+        document.write(a+"<br>");
+        document.write(b+"<br>");
+        document.write(a+b+"<br>");
+        //a+b=12
+        document.write("a+b="+(a+b)+"<br>");
+        sum=a+b;
+        document.write("sum="+sum+"<br>");
+
+        var num1=100;
+        var num2=30;
+        
+        add = num1+num2;
+        sub = num1-num2;
+        mul = num1*num2;
+        div= num1/num2;
+        mod=num1%num2;
+
+        document.write("덧셈 : " + add+"<br>");
+        document.write("뺄셈 : " + sub+"<br>");
+        document.write("곱셈 : " + mul+"<br>");
+        document.write("나눗셈 : " +div+"<br>");
+        document.write("나머지 : " +mod+"<br>");
+
+        r1=num1 <= num2; //100<=30
+        r2=num1==num2;  //100==30
+        r3=num1!=num2;  //100 != 30
+        document.write("r1 :"+r1+"<br>");
+        document.write("r2 :"+r2+"<br>");
+        document.write("r3 :"+r3+"<br>");
+
+        r4=(num1<=num2) && (num1 >= num2); //100<30(f) 100>=30(t)
+        r5=(num1<=num2) || (num1 >= num2); //100<=30(f) 100>=30(t)
+        r6=!(num1!=num2); //!(100!=30(t)) !t ==>f
+        document.write("r4 :"+r4+"<br>"); 
+        document.write("r5 :"+r5+"<br>");
+        document.write("r6 :"+r6+"<br>");
+        var n=10;
+        var m=5;
+        document.write(n + "<br>");
+        document.write(n++ + "<br>");
+        document.write(n + "<br>");
+        document.write(++n + "<br><br>");
+
+        document.write(n-- + "<br>");
+        document.write(n + "<br>");
+        document.write(--n + "<br><hr>");   //n=10
+
+        document.write(n++ + m++ + "<br>");
+        document.write(n+"<br>");   //11
+        document.write(m+"<br>");   //6
+        document.write(++n + ++m + "<br>"); //12+7=19
+        document.write(--n + m-- + "<br>"); //11+7=18 m=6
+        document.write("<hr>");
+
+        if(n>m){
+            document.write("큽니다.")
+        }else{
+            document.write("작습니다.")
+        }
+        document.write("<br/>");
+    
+        var k=25;
+        if(k%2==0){
+            document.write("짝수");
+        }else{
+            document.write("홀수");
+        }
+        document.write("<br/>");
+        /*
+        var su=prompt("숫자를 넣으세요");
+        if(su%2==0){
+            document.write("짝수");
+        }else{
+            document.write("홀수");
+        }
+        */
+       
+        age = prompt("나이를 입력하세요");
+       /*
+        if(age>=20){
+            alert("입장가능");
+        }else if(age>=15){
+            alert("부모님과 동반입장");
+        }else{
+            alert("입장불가능");
+        }
+        */
+        /*
+        if(age>=20){
+            alert("가능");
+        }
+        if(age >=15 && age<20){
+            alert("부모님 동반");
+        }
+        if(age<15){
+            alert("불가능");
+        }*/
+        if(age >= 20){
+            document.write("입장하세요");
+        }
+        if(age>=15){
+            if(age < 20){
+                document.write("부모님과 함께");
+            }
+        }else{
+            document.write("입장불가");
+        }
+
+    </script>
+</body>
+</html>
