@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function day(x){
+            var str=""
+            switch(x){
+                case 0:str=("일");break;
+                case 1:str=("월");break;
+                case 2:str=("화");break;
+                case 3:str=("수");break;
+                case 4:str=("목");break;
+                case 5:str=("금");break;
+                case 6:str=("토");break;
+            }
+            return str;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        document.write("시 : "+today.getHours()+"<br/>");
+        document.write("분 : "+today.getMinutes()+"<br/>");
+        document.write("초 : "+today.getSeconds()+"<br/>");
+        document.write("년도 : "+today.getFullYear()+"<br/>");
+        document.write("월 : "+(today.getMonth()+1)+"<br/>");
+        document.write("일 : "+today.getDate()+"<br/>");
+        document.write("요일 : "+today.getDay()+"<br/>"); //4-->목요일
+        document.write("요일 : "+day(today.getDay())+"<hr>"); //요일 : 목
+
+        var oneday = new Date(2020,11,25);
+        document.write(day(oneday.getDay())+"요일<br>");
+        var someday = new Date(2021,11,25);
+        document.write(day(someday.getDay())+"요일<br>");
+
+        var arr = new Array("일","월","화","수","목","금","토")
+        document.write("오늘요일(배열이용) : " + arr[today.getDay()]+"<br>")
+        document.write("oneday요일(배열이용) : " + arr[oneday.getDay()]+"<br>")
+        document.write("someday요일(배열이용) : " + arr[someday.getDay()]+"<br>")
+    </script>
+
+</body>
+</html>

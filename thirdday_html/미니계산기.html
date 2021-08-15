@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function exec(op){
+        var n1 = eval(document.getElementById("num1").value); //객체
+        var n2 = eval(document.getElementById("num2").value);
+        var dap=0; //변수
+        // if(op=="+"){
+        //     // document.getElementById("result").value=n1+n2;
+        //     dap=n1+n2;
+        // }else if(op=="-"){
+        //     // document.getElementById("result").value=n1-n2;
+        //     dap=n1-n2;
+        // }else if(op=="*"){
+        //     // document.getElementById("result").value=n1*n2;
+        //     dap=n1*n2;
+        // }else if(op=="/"){
+        //     // document.getElementById("result").value=n1/n2;
+        //     dap=n1/n2;
+        // }
+        switch(op){
+            case "+": dap=n1+n2;break;
+            case "-": dap=n1-n2;break;
+            case "*": dap=n1*n2;break;
+            case "/": dap=n1/n2;break;
+        }
+        document.getElementById("result").value=dap
+    }
+</script>
+<body>
+    <table border="1" align=center>
+        <caption>미니 계산기</caption>
+        <tr>
+            <td>숫자1</td>
+            <td><input type="text" id= "num1"></td>
+        </tr>
+        <tr>
+            <td>숫자2</td>
+            <td><input type="text" id="num2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="더하기" onclick="exec('+')"/>
+                <input type="button" value="빼기" onclick="exec('-')"/>
+                <input type="button" value="곱하기" onclick="exec('*')"/>
+                <input type="button" value="나누기" onclick="exec('/')"/>
+            </td>
+        </tr>
+        <tr>
+            <td>결과</td>
+            <td><input type="text" id="result"></td>
+        </tr>
+    </table>
+</body>
+</html>

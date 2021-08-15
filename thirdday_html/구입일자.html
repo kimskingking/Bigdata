@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkDate(){
+            //구입날짜가 30일이 지나면 교환시한이 지났습니다.
+            //교환가능  alert
+            var s =document.getElementById("pdate").value;
+           
+            var today= new Date(); //오늘
+            var pdate = new Date(s); //구입한 날
+            var diff = today.getTime() - pdate.getTime();
+            var days = Math.floor(diff/1000*60*60*24);
+            if(days>30){
+                alert("교환시한이 지났습니다");
+            }else{
+                alert("교환가능");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    구입날짜 :
+    <input type="date" id="pdate"/>
+    <button onclick="checkDate()">검사</button> 
+</body>
+</html>

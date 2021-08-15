@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div>
+    <script>
+        var arr=new Array();
+        arr[0]="zero";
+        arr[1]="one";
+        arr[2]="two";
+        arr[3]="three";
+        for(i=0;i<arr.length;i++){
+            document.write(arr[i]+" ")
+        }
+        document.write("<hr/>")
+        document.write("arr 마지막원소 : " + arr[arr.length-1])
+        document.write("<hr/>")
+
+        var tmp = new Array("자바","오라클","태그");
+         document.write(tmp.length)
+
+        var imgArr=new Array("1.jpg","2.jpg","3.jpg","4.jpg","5.jpg");
+        // var i=0;
+        var flag=null;
+        function viewImg(){
+            var ran = Math.floor(Math.random()*imgArr.length)
+            document.getElementById("result").innerHTML 
+            = "<img src='image/"+imgArr[ran]+"'>";
+            // i++;
+            // if(i==imgArr.length) i=0;
+            flag = setTimeout("viewImg()",500);
+        }
+        function stopImg(){
+            if(flag!=null) clearTimeout(flag);
+        }
+    </script>
+    <button onclick="viewImg()">클릭</button>
+    <button onclick="stopImg()">멈추기</button>
+    <div id="result"/>
+</body>
+</html>

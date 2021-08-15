@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function seatCal(){
+            var sNum = parseInt(document.getElementById("all").value)
+            var cNum = parseInt(document.getElementById("line").value)
+            var str="<h1>자리배치도</h1><table border=1>";
+            str += "<tr>"
+                for(i=1;i<=sNum;i++){
+                    str+="<td>"+i +"번</td>"
+                    if(i%cNum==0){
+                        str += "</tr><tr>"
+                    }
+                }
+            str +="</tr></table>"
+            document.getElementById("seatArea").innerHTML =str;
+        }
+        function seatCal1(){
+            var sNum = parseInt(document.getElementById("all").value)
+            var cNum = parseInt(document.getElementById("line").value)
+            var str="<h1>자리배치도</h1><table border=1>";
+            //몇줄이 필요한가
+            // if (sNum%cNum==0){
+            //     rowNum = parseInt(sNum/cNum);
+            // }else{
+            //     rowNum = parseInt(sNum/cNum)+1;
+            // }
+            rowNum=(sNum%cNum==0)?parseInt(sNum/cNum) : parseInt(sNum/cNum)+1;
+            for(i=1; i<=rowNum;i++){ //라인 수
+                str+="<tr>"
+                for(j=1; j<=cNum; j++){ //한줄에 앉힐 학생 수
+                    num=i*cNum+j
+                    if(num > sNum)break;
+                    str+="<td>"+num+"번</td>"
+                }
+                str +="</tr>"
+            }
+            str +="</table>"
+            document.getElementById("seatArea").innerHTML =str;
+        }
+
+        var seatCal2=function(){
+            var sNum = parseInt(document.getElementById("all").value)
+            var cNum = parseInt(document.getElementById("line").value)
+            var str="<h1>자리배치도</h1><table border=1>";
+            //몇줄이 필요한가
+            rowNum=(sNum%cNum==0)?parseInt(sNum/cNum) : parseInt(sNum/cNum)+1;
+            for(i=1; i<=rowNum;i++){ //라인 수
+                str+="<tr>"
+                for(j=1; j<=cNum; j++){ //한줄에 앉힐 학생 수
+                    num=i*cNum+j
+                    if(num > sNum)break;
+                    str+="<td>"+num+"번</td>"
+                }
+                str +="</tr>"
+            }
+            str +="</table>"
+            document.getElementById("seatArea").innerHTML =str;
+        }
+    </script>
+</head>
+<body>
+    전체 인원수<input type="text" id="all"> <br/>
+    한 줄인원수<input type="text" id="line"><br/>
+    <input type="button" value="자리배치" onclick="seatCal()"/> 
+    <input type="button" value="for 자리배치" onclick="seatCal1()"/>
+    <input type="button" value="for 자리배치2" onclick="seatCal2()"/> 
+    <div id ="seatArea"></div>
+    
+</body>
+</html>

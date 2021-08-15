@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function over(obj){
+            obj.src="image/1.jpg"
+        }
+        function out(obj){
+            obj.src="image/4.jpg"
+        }
+    </script>
+</head>
+<body>
+    <!--
+        상대 경로 : 현재 위치가 기준
+        절대 경로 : 루트부터 시작
+     -->
+    <h3>마우스를 올려 보세요</h3>
+    <img src="./image/1.jpg"  alt="이마 탁"
+    onmouseover="over(this)" onmouseout="out(this)">
+    <hr>
+    <div align="right">
+    <img src="./image/4.jpg"  alt="이미지"
+    onmouseover="this.src='./image/1.jpg'" onmouseout="this.src='./image/4.jpg'">
+    </div>
+</body>
+</html>
