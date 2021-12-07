@@ -1,0 +1,22 @@
+com/example/ex12_06_2/BuildConfig.java
+ com.example.ex12_06_2.BuildConfig
+com/example/ex12_06_2/PhoneService.java
+ com.example.ex12_06_2.PhoneService
+com/example/ex12_06_2/Phone.java
+ com.example.ex12_06_2.Phone
+com/example/ex12_06_2/MainActivity.java
+ com.example.ex12_06_2.MainActivity
+ com.example.ex12_06_2.MainActivity$1
+ com.example.ex12_06_2.MainActivity$2
+ com.example.ex12_06_2.MainActivity$3
+ com.example.ex12_06_2.MainActivity$3$1
+com/example/ex12_06_2/Retrofit2Client.java
+ com.example.ex12_06_2.Retrofit2Client
+com/example/ex12_06_2/PhoneAdapter.java
+ com.example.ex12_06_2.PhoneAdapter
+ com.example.ex12_06_2.PhoneAdapter$1
+ com.example.ex12_06_2.PhoneAdapter$1$1
+ com.example.ex12_06_2.PhoneAdapter$1$1$1
+ com.example.ex12_06_2.PhoneAdapter$1$2
+ com.example.ex12_06_2.PhoneAdapter$1$2$1
+ com.example.ex12_06_2.PhoneAdapter$MyViewHolder
